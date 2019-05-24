@@ -1,0 +1,64 @@
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+{% block content  %}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Page summarizer</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--==============================STYLES=================================================================-->
+<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico'%}"/>
+<link rel='stylesheet' href='{% static "css/style.css"%}' />
+</head>
+
+
+
+
+<body>
+        <center>   
+
+                        <h3 class=" heading"style ="">
+                                        PAGE SUMMARIZER
+                        </h3>
+                         <!-----------------heading------------------------->
+                <hr>                                         
+                     <div class="size">
+                        <form method='POST' action=''> {% csrf_token %}
+                        {{form|crispy}}
+                        <br>
+                        <input type="submit" value="summarize" class = 'btn btn default'/>
+                        </form>
+                     </div>              
+                <hr>
+                <!-------------------------keywords----------------------------------->
+                <div  class="" style="width:900px">
+                    <div>
+                        {% if keywords %}
+                    <h4> <u>KEYWORDS</u>   </h4>       
+                        <p> {{keywords}}</p><br>
+                        {% endif %}
+                     </div>   
+               <!---------------------------summary--------------------------------->         
+                     <div> 
+                         {% if results %}
+                    <h4>  <u>SUMMARY</u>   </h4>              
+                        {% for sentence in results %}                                   
+                         {{sentence}}
+                        {% endfor %}                           
+                     <p>-----END-----</p>
+                                <br>
+                          {% endif %}
+                    
+                <!----------------------------end-------------------------------->         
+                    </div>
+                </div>
+                
+        </center>
+</body>
+
+</html>
+{% endblock%}

@@ -1,0 +1,74 @@
+.size{
+width:500px;
+font-family:Garamond;
+}
+
+
+input[type=url],#id_LANGUAGE{
+  width: 70%;
+  padding: 6px 20px;
+  margin: 1px 0;
+  box-sizing: border-box;
+  border: 2px solid pink;
+  border-radius: 4px;
+  
+}
+input[type=url]:hover{
+  border: 2px solid #A569BD;
+}
+
+
+#id_LANGUAGE{
+  width: 40%;
+  padding: 5px 20px;
+  margin: 1px 0;
+  box-sizing: border-box;
+  border: 2px solid pink;
+  border-radius: 4px;
+  
+}
+
+#id_LANGUAGE:hover{
+border: 2px solid  #A569BD;
+}
+
+
+input[type=number] {
+  width: 30%;
+  padding: 6px 20px;
+  margin: 1px 0;
+  box-sizing: border-box;
+  border: 2px solid pink;
+  border-radius: 4px;
+}
+input[type=number]:hover {
+  border: 2px solid #A569BD;
+}
+
+
+
+input[type=submit] {
+width: 35%;
+  padding: 6px 20px;
+  margin: px 0;
+  box-sizing: border-box;
+  border: 2px solid pink;
+  border-radius: 4px;
+}
+
+
+input[type=submit]:hover{
+ border: 2px solid  #A569BD;
+}
+.heading{
+font-family:Georgia;
+ color: #A569BD;
+ border: 2px solid pink;
+ width:350px; height:25px;
+ background-color: pink;
+
+
+}
+h4{
+color: #A569BD;
+}

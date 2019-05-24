@@ -1,0 +1,4 @@
+django
+sumy
+newspaper3k
+nltk
